@@ -8,8 +8,8 @@ class Student {
 public:
   std::string vardas;
   std::string pavarde;
-  std::vector<int> nd_balai; // Namų darbų balai
-  int egzaminas;             // Egzamino balas
+  std::vector<int> nd_balai;
+  int egzaminas;
 
   Student(const std::string &v, const std::string &p,
           const std::vector<int> &nd, int egz)
