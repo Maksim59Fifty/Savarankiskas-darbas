@@ -1,0 +1,284 @@
+
+---
+events:
+  -
+    kind: "message-v1"
+    backtrace:
+      - "F:/Cmake/share/cmake-3.31/Modules/CMakeDetermineSystem.cmake:205 (message)"
+      - "CMakeLists.txt"
+    message: |
+      The system is: Windows - 10.0.19045 - AMD64
+  -
+    kind: "message-v1"
+    backtrace:
+      - "F:/Cmake/share/cmake-3.31/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "F:/Cmake/share/cmake-3.31/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "F:/Cmake/share/cmake-3.31/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+      Compiler:  
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      MSBuild version 17.10.4+10fbfbf2e for .NET Framework
+      Build started 11/11/2024 11:26:50 PM.
+      
+      Project "C:\\Users\\matas\\Desktop\\stud sar\\out\\CMakeFiles\\3.31.0\\CompilerIdC\\CompilerIdC.vcxproj" on node 1 (default targets).
+      PrepareForBuild:
+        Creating directory "Debug\\".
+        Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+        Creating directory "Debug\\CompilerIdC.tlog\\".
+      InitializeBuildStatus:
+        Creating "Debug\\CompilerIdC.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+        Touching "Debug\\CompilerIdC.tlog\\unsuccessfulbuild".
+      ClCompile:
+        F:\\VSC\\VC\\Tools\\MSVC\\14.40.33807\\bin\\HostX64\\x64\\CL.exe /c /nologo /W0 /WX- /diagnostics:column /Od /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\\\" /Fd"Debug\\vc143.pdb" /external:W0 /Gd /TC /FC /errorReport:queue CMakeCCompilerId.c
+        CMakeCCompilerId.c
+      Link:
+        F:\\VSC\\VC\\Tools\\MSVC\\14.40.33807\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:".\\CompilerIdC.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:".\\CompilerIdC.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\\CompilerIdC.lib" /MACHINE:X64 Debug\\CMakeCCompilerId.obj
+        CompilerIdC.vcxproj -> C:\\Users\\matas\\Desktop\\stud sar\\out\\CMakeFiles\\3.31.0\\CompilerIdC\\CompilerIdC.exe
+      PostBuildEvent:
+        for %%i in (cl.exe) do @echo CMAKE_C_COMPILER=%%~$PATH:i
+        :VCEnd
+        CMAKE_C_COMPILER=F:\\VSC\\VC\\Tools\\MSVC\\14.40.33807\\bin\\Hostx64\\x64\\cl.exe
+      FinalizeBuildStatus:
+        Deleting file "Debug\\CompilerIdC.tlog\\unsuccessfulbuild".
+        Touching "Debug\\CompilerIdC.tlog\\CompilerIdC.lastbuildstate".
+      Done Building Project "C:\\Users\\matas\\Desktop\\stud sar\\out\\CMakeFiles\\3.31.0\\CompilerIdC\\CompilerIdC.vcxproj" (default targets).
+      
+      Build succeeded.
+          0 Warning(s)
+          0 Error(s)
+      
+      Time Elapsed 00:00:02.50
+      
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CompilerIdC.exe"
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CompilerIdC.vcxproj"
+      
+      The C compiler identification is MSVC, found in:
+        C:/Users/matas/Desktop/stud sar/out/CMakeFiles/3.31.0/CompilerIdC/CompilerIdC.exe
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "F:/Cmake/share/cmake-3.31/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "F:/Cmake/share/cmake-3.31/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "F:/Cmake/share/cmake-3.31/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+      Compiler:  
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      MSBuild version 17.10.4+10fbfbf2e for .NET Framework
+      Build started 11/11/2024 11:26:52 PM.
+      
+      Project "C:\\Users\\matas\\Desktop\\stud sar\\out\\CMakeFiles\\3.31.0\\CompilerIdCXX\\CompilerIdCXX.vcxproj" on node 1 (default targets).
+      PrepareForBuild:
+        Creating directory "Debug\\".
+        Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+        Creating directory "Debug\\CompilerIdCXX.tlog\\".
+      InitializeBuildStatus:
+        Creating "Debug\\CompilerIdCXX.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+        Touching "Debug\\CompilerIdCXX.tlog\\unsuccessfulbuild".
+      ClCompile:
+        F:\\VSC\\VC\\Tools\\MSVC\\14.40.33807\\bin\\HostX64\\x64\\CL.exe /c /nologo /W0 /WX- /diagnostics:column /Od /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\\\" /Fd"Debug\\vc143.pdb" /external:W0 /Gd /TP /FC /errorReport:queue CMakeCXXCompilerId.cpp
+        CMakeCXXCompilerId.cpp
+      Link:
+        F:\\VSC\\VC\\Tools\\MSVC\\14.40.33807\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:".\\CompilerIdCXX.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:".\\CompilerIdCXX.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\\CompilerIdCXX.lib" /MACHINE:X64 Debug\\CMakeCXXCompilerId.obj
+        CompilerIdCXX.vcxproj -> C:\\Users\\matas\\Desktop\\stud sar\\out\\CMakeFiles\\3.31.0\\CompilerIdCXX\\CompilerIdCXX.exe
+      PostBuildEvent:
+        for %%i in (cl.exe) do @echo CMAKE_CXX_COMPILER=%%~$PATH:i
+        :VCEnd
+        CMAKE_CXX_COMPILER=F:\\VSC\\VC\\Tools\\MSVC\\14.40.33807\\bin\\Hostx64\\x64\\cl.exe
+      FinalizeBuildStatus:
+        Deleting file "Debug\\CompilerIdCXX.tlog\\unsuccessfulbuild".
+        Touching "Debug\\CompilerIdCXX.tlog\\CompilerIdCXX.lastbuildstate".
+      Done Building Project "C:\\Users\\matas\\Desktop\\stud sar\\out\\CMakeFiles\\3.31.0\\CompilerIdCXX\\CompilerIdCXX.vcxproj" (default targets).
+      
+      Build succeeded.
+          0 Warning(s)
+          0 Error(s)
+      
+      Time Elapsed 00:00:01.29
+      
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX.exe"
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX.vcxproj"
+      
+      The CXX compiler identification is MSVC, found in:
+        C:/Users/matas/Desktop/stud sar/out/CMakeFiles/3.31.0/CompilerIdCXX/CompilerIdCXX.exe
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "F:/Cmake/share/cmake-3.31/Modules/CMakeDetermineCompilerABI.cmake:74 (try_compile)"
+      - "F:/Cmake/share/cmake-3.31/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt"
+    checks:
+      - "Detecting C compiler ABI info"
+    directories:
+      source: "C:/Users/matas/Desktop/stud sar/out/CMakeFiles/CMakeScratch/TryCompile-u9jdaq"
+      binary: "C:/Users/matas/Desktop/stud sar/out/CMakeFiles/CMakeScratch/TryCompile-u9jdaq"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3"
+    buildResult:
+      variable: "CMAKE_C_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/matas/Desktop/stud sar/out/CMakeFiles/CMakeScratch/TryCompile-u9jdaq'
+        
+        Run Build Command(s): F:/VSC/MSBuild/Current/Bin/amd64/MSBuild.exe cmTC_88d57.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        MSBuild version 17.10.4+10fbfbf2e for .NET Framework
+        Build started 11/11/2024 11:26:55 PM.
+        
+        Project "C:\\Users\\matas\\Desktop\\stud sar\\out\\CMakeFiles\\CMakeScratch\\TryCompile-u9jdaq\\cmTC_88d57.vcxproj" on node 1 (default targets).
+        PrepareForBuild:
+          Creating directory "cmTC_88d57.dir\\Debug\\".
+          Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+          Creating directory "C:\\Users\\matas\\Desktop\\stud sar\\out\\CMakeFiles\\CMakeScratch\\TryCompile-u9jdaq\\Debug\\".
+          Creating directory "cmTC_88d57.dir\\Debug\\cmTC_88d57.tlog\\".
+        InitializeBuildStatus:
+          Creating "cmTC_88d57.dir\\Debug\\cmTC_88d57.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+          Touching "cmTC_88d57.dir\\Debug\\cmTC_88d57.tlog\\unsuccessfulbuild".
+        ClCompile:
+          F:\\VSC\\VC\\Tools\\MSVC\\14.40.33807\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_88d57.dir\\Debug\\\\" /Fd"cmTC_88d57.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "F:\\Cmake\\share\\cmake-3.31\\Modules\\CMakeCCompilerABI.c"
+          Microsoft (R) C/C++ Optimizing Compiler Version 19.40.33811 for x64
+          Copyright (C) Microsoft Corporation.  All rights reserved.
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_88d57.dir\\Debug\\\\" /Fd"cmTC_88d57.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "F:\\Cmake\\share\\cmake-3.31\\Modules\\CMakeCCompilerABI.c"
+          CMakeCCompilerABI.c
+        Link:
+          F:\\VSC\\VC\\Tools\\MSVC\\14.40.33807\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\matas\\Desktop\\stud sar\\out\\CMakeFiles\\CMakeScratch\\TryCompile-u9jdaq\\Debug\\cmTC_88d57.exe" /INCREMENTAL /ILK:"cmTC_88d57.dir\\Debug\\cmTC_88d57.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/matas/Desktop/stud sar/out/CMakeFiles/CMakeScratch/TryCompile-u9jdaq/Debug/cmTC_88d57.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/matas/Desktop/stud sar/out/CMakeFiles/CMakeScratch/TryCompile-u9jdaq/Debug/cmTC_88d57.lib" /MACHINE:X64  /machine:x64 cmTC_88d57.dir\\Debug\\CMakeCCompilerABI.obj
+          cmTC_88d57.vcxproj -> C:\\Users\\matas\\Desktop\\stud sar\\out\\CMakeFiles\\CMakeScratch\\TryCompile-u9jdaq\\Debug\\cmTC_88d57.exe
+        FinalizeBuildStatus:
+          Deleting file "cmTC_88d57.dir\\Debug\\cmTC_88d57.tlog\\unsuccessfulbuild".
+          Touching "cmTC_88d57.dir\\Debug\\cmTC_88d57.tlog\\cmTC_88d57.lastbuildstate".
+        Done Building Project "C:\\Users\\matas\\Desktop\\stud sar\\out\\CMakeFiles\\CMakeScratch\\TryCompile-u9jdaq\\cmTC_88d57.vcxproj" (default targets).
+        
+        Build succeeded.
+            0 Warning(s)
+            0 Error(s)
+        
+        Time Elapsed 00:00:01.03
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "F:/Cmake/share/cmake-3.31/Modules/CMakeDetermineCompilerABI.cmake:218 (message)"
+      - "F:/Cmake/share/cmake-3.31/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt"
+    message: |
+      Parsed C implicit link information:
+        link line regex: [^( *|.*[/\\])(ld[0-9]*(\\.[a-z]+)?|link\\.exe|lld-link(\\.exe)?|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        linker tool regex: [^[ 	]*(->|")?[ 	]*(([^"]*[/\\])?(ld[0-9]*(\\.[a-z]+)?|link\\.exe|lld-link(\\.exe)?))("|,| |$)]
+        linker tool for 'C': F:/VSC/VC/Tools/MSVC/14.40.33807/bin/HostX64/x64/link.exe
+        implicit libs: []
+        implicit objs: []
+        implicit dirs: []
+        implicit fwks: []
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "F:/Cmake/share/cmake-3.31/Modules/Internal/CMakeDetermineLinkerId.cmake:40 (message)"
+      - "F:/Cmake/share/cmake-3.31/Modules/CMakeDetermineCompilerABI.cmake:255 (cmake_determine_linker_id)"
+      - "F:/Cmake/share/cmake-3.31/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt"
+    message: |
+      Running the C compiler's linker: "F:/VSC/VC/Tools/MSVC/14.40.33807/bin/HostX64/x64/link.exe" "-v"
+      Microsoft (R) Incremental Linker Version 14.40.33811.0
+      Copyright (C) Microsoft Corporation.  All rights reserved.
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "F:/Cmake/share/cmake-3.31/Modules/CMakeDetermineCompilerABI.cmake:74 (try_compile)"
+      - "F:/Cmake/share/cmake-3.31/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt"
+    checks:
+      - "Detecting CXX compiler ABI info"
+    directories:
+      source: "C:/Users/matas/Desktop/stud sar/out/CMakeFiles/CMakeScratch/TryCompile-xrrnyj"
+      binary: "C:/Users/matas/Desktop/stud sar/out/CMakeFiles/CMakeScratch/TryCompile-xrrnyj"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /W3 /GR /EHsc"
+      CMAKE_CXX_SCAN_FOR_MODULES: "OFF"
+    buildResult:
+      variable: "CMAKE_CXX_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/matas/Desktop/stud sar/out/CMakeFiles/CMakeScratch/TryCompile-xrrnyj'
+        
+        Run Build Command(s): F:/VSC/MSBuild/Current/Bin/amd64/MSBuild.exe cmTC_2cfdf.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        MSBuild version 17.10.4+10fbfbf2e for .NET Framework
+        Build started 11/11/2024 11:26:56 PM.
+        
+        Project "C:\\Users\\matas\\Desktop\\stud sar\\out\\CMakeFiles\\CMakeScratch\\TryCompile-xrrnyj\\cmTC_2cfdf.vcxproj" on node 1 (default targets).
+        PrepareForBuild:
+          Creating directory "cmTC_2cfdf.dir\\Debug\\".
+          Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+          Creating directory "C:\\Users\\matas\\Desktop\\stud sar\\out\\CMakeFiles\\CMakeScratch\\TryCompile-xrrnyj\\Debug\\".
+          Creating directory "cmTC_2cfdf.dir\\Debug\\cmTC_2cfdf.tlog\\".
+        InitializeBuildStatus:
+          Creating "cmTC_2cfdf.dir\\Debug\\cmTC_2cfdf.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+          Touching "cmTC_2cfdf.dir\\Debug\\cmTC_2cfdf.tlog\\unsuccessfulbuild".
+        ClCompile:
+          F:\\VSC\\VC\\Tools\\MSVC\\14.40.33807\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_2cfdf.dir\\Debug\\\\" /Fd"cmTC_2cfdf.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TP /errorReport:queue "F:\\Cmake\\share\\cmake-3.31\\Modules\\CMakeCXXCompilerABI.cpp"
+          Microsoft (R) C/C++ Optimizing Compiler Version 19.40.33811 for x64
+          Copyright (C) Microsoft Corporation.  All rights reserved.
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_2cfdf.dir\\Debug\\\\" /Fd"cmTC_2cfdf.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TP /errorReport:queue "F:\\Cmake\\share\\cmake-3.31\\Modules\\CMakeCXXCompilerABI.cpp"
+          CMakeCXXCompilerABI.cpp
+        Link:
+          F:\\VSC\\VC\\Tools\\MSVC\\14.40.33807\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\matas\\Desktop\\stud sar\\out\\CMakeFiles\\CMakeScratch\\TryCompile-xrrnyj\\Debug\\cmTC_2cfdf.exe" /INCREMENTAL /ILK:"cmTC_2cfdf.dir\\Debug\\cmTC_2cfdf.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/matas/Desktop/stud sar/out/CMakeFiles/CMakeScratch/TryCompile-xrrnyj/Debug/cmTC_2cfdf.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/matas/Desktop/stud sar/out/CMakeFiles/CMakeScratch/TryCompile-xrrnyj/Debug/cmTC_2cfdf.lib" /MACHINE:X64  /machine:x64 cmTC_2cfdf.dir\\Debug\\CMakeCXXCompilerABI.obj
+          cmTC_2cfdf.vcxproj -> C:\\Users\\matas\\Desktop\\stud sar\\out\\CMakeFiles\\CMakeScratch\\TryCompile-xrrnyj\\Debug\\cmTC_2cfdf.exe
+        FinalizeBuildStatus:
+          Deleting file "cmTC_2cfdf.dir\\Debug\\cmTC_2cfdf.tlog\\unsuccessfulbuild".
+          Touching "cmTC_2cfdf.dir\\Debug\\cmTC_2cfdf.tlog\\cmTC_2cfdf.lastbuildstate".
+        Done Building Project "C:\\Users\\matas\\Desktop\\stud sar\\out\\CMakeFiles\\CMakeScratch\\TryCompile-xrrnyj\\cmTC_2cfdf.vcxproj" (default targets).
+        
+        Build succeeded.
+            0 Warning(s)
+            0 Error(s)
+        
+        Time Elapsed 00:00:00.98
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "F:/Cmake/share/cmake-3.31/Modules/CMakeDetermineCompilerABI.cmake:218 (message)"
+      - "F:/Cmake/share/cmake-3.31/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt"
+    message: |
+      Parsed CXX implicit link information:
+        link line regex: [^( *|.*[/\\])(ld[0-9]*(\\.[a-z]+)?|link\\.exe|lld-link(\\.exe)?|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        linker tool regex: [^[ 	]*(->|")?[ 	]*(([^"]*[/\\])?(ld[0-9]*(\\.[a-z]+)?|link\\.exe|lld-link(\\.exe)?))("|,| |$)]
+        linker tool for 'CXX': F:/VSC/VC/Tools/MSVC/14.40.33807/bin/HostX64/x64/link.exe
+        implicit libs: []
+        implicit objs: []
+        implicit dirs: []
+        implicit fwks: []
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "F:/Cmake/share/cmake-3.31/Modules/Internal/CMakeDetermineLinkerId.cmake:40 (message)"
+      - "F:/Cmake/share/cmake-3.31/Modules/CMakeDetermineCompilerABI.cmake:255 (cmake_determine_linker_id)"
+      - "F:/Cmake/share/cmake-3.31/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt"
+    message: |
+      Running the CXX compiler's linker: "F:/VSC/VC/Tools/MSVC/14.40.33807/bin/HostX64/x64/link.exe" "-v"
+      Microsoft (R) Incremental Linker Version 14.40.33811.0
+      Copyright (C) Microsoft Corporation.  All rights reserved.
+...

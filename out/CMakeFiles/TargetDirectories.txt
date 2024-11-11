@@ -1,0 +1,2 @@
+C:/Users/matas/Desktop/stud sar/out/CMakeFiles/ALL_BUILD.dir
+C:/Users/matas/Desktop/stud sar/out/CMakeFiles/ZERO_CHECK.dir
