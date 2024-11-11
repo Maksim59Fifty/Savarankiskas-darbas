@@ -1,60 +1,47 @@
-#include "Studentas.h"
 #include <iostream>
 #include <vector>
-#include <fstream>
-#include <algorithm>
-#include <stdexcept>
+#include "Studentas.h"
 
-using namespace std;
+int pasirinktasDydis() {
+    int pasirinkimas;
+    std::cout << "Pasirinkite studentų sąrašo dydį (1 - 1000, 2 - 10000, 3 - 100000, 4 - 1000000, 5 - 10000000): ";
+    std::cin >> pasirinkimas;
 
-// Rūšiuoti pagal pavardę
-bool lygintiPavarde(const Studentas &a, const Studentas &b) {
-    return a.gautiPavarde() < b.gautiPavarde();
+    switch (pasirinkimas) {
+        case 1: return 1000;
+        case 2: return 10000;
+        case 3: return 100000;
+        case 4: return 1000000;
+        case 5: return 10000000;
+        default: 
+            std::cout << "Netinkamas pasirinkimas! Pasirinktas dydis 1000." << std::endl;
+            return 1000;
+    }
 }
 
 int main() {
-    vector<Studentas> studentai;
-    char pasirinkimas;
-    cout << "Norite generuoti atsitiktinius duomenis (g) ar nuskaityti iš failo (f)? (g/f): ";
-    cin >> pasirinkimas;
+    int dydis = pasirinktasDydis();
+    std::string failoPavadinimas = "studentai_" + std::to_string(dydis) + ".txt";
 
-    try {
-        if (pasirinkimas == 'g') {
-            int studentu_skaicius;
-            cout << "Įveskite studentų skaičių: ";
-            cin >> studentu_skaicius;
+    // 1. Generuojame duomenų failą
+    std::cout << "Generuojamas failas su " << dydis << " studentais...\n";
+    generuotiDuomenis(dydis, failoPavadinimas);
+    std::cout << "Failas " << failoPavadinimas << " sėkmingai sukurtas!\n";
 
-            for (int i = 0; i < studentu_skaicius; ++i) {
-                Studentas studentas;
-                studentas.generuotiAtsitiktiniusDuomenis();
-                studentas.skaiciuotiGalutiniusBalus();
-                studentai.push_back(studentas);
-            }
-        } else if (pasirinkimas == 'f') {
-            ifstream in("kursiokai.txt");
-            if (!in) throw runtime_error("Nepavyko atidaryti failo kursiokai.txt");
+    // 2. Nuskaitymas į vektorių
+    std::vector<Student> studentai;
+    nuskaitytiDuomenis(failoPavadinimas, studentai);
 
-            while (!in.eof()) {
-                Studentas studentas;
-                studentas.nuskaitytiIsFailo(in);
-                studentai.push_back(studentas);
-            }
-            in.close();
-        }
+    // 3. Rūšiavimas į dvi kategorijas
+    std::vector<Student> vargsiukai;
+    std::vector<Student> kietiakai;
+    rusiavimas(studentai, vargsiukai, kietiakai);
 
-        // Surūšiuoti studentus pagal pavardes
-        sort(studentai.begin(), studentai.end(), lygintiPavarde);
+    // 4. Išvedimas į atskirus failus
+    isvestiDuomenis("vargsiukai.txt", vargsiukai);
+    isvestiDuomenis("kietiakai.txt", kietiakai);
 
-        // Išvedimas
-        cout << "Pavardė          Vardas         Galutinis (Vid.)   Galutinis (Med.)" << endl;
-        cout << "------------------------------------------------------------------" << endl;
-        for (const Studentas &studentas : studentai) {
-            studentas.spausdintiRezultata();
-        }
-
-    } catch (const exception &e) {
-        cerr << "Klaida: " << e.what() << endl;
-    }
+    std::cout << "Failai su vargšiukais ir kietiakais sukurti!\n";
 
     return 0;
 }
