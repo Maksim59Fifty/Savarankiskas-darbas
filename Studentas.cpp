@@ -1,76 +1,95 @@
 #include "Studentas.h"
-#include <random>
-#include <algorithm>
-#include <iomanip>
 #include <fstream>
-#include <stdexcept>
+#include <sstream>
+#include <iomanip>
+#include <numeric>
+#include <random>
+#include <iostream>
 
-using namespace std;
-
-Studentas::Studentas() : vardas(""), pavarde(""), egzaminas(0), galutinis_vidurkis(0.0), galutinis_mediana(0.0) {}
-Studentas::~Studentas() {}
-
-void Studentas::generuotiAtsitiktiniusDuomenis() {
-    random_device rd;
-    mt19937 gen(rd());
-    uniform_int_distribution<> dist(1, 10);
-
-    cout << "Įveskite studento vardą: ";
-    cin >> vardas;
-    cout << "Įveskite studento pavardę: ";
-    cin >> pavarde;
-
-    namu_darbai.clear();
-    for (int i = 0; i < 5; ++i) {
-        namu_darbai.push_back(dist(gen)); // Atsitiktiniai namų darbų balai
+void generuotiDuomenis(int kiekis, const std::string& failoPavadinimas) {
+    std::ofstream out(failoPavadinimas);
+    out << std::setw(20) << "Vardas" << std::setw(20) << "Pavarde";
+    for (int i = 1; i <= 15; ++i) {
+        out << std::setw(10) << "ND" + std::to_string(i);
     }
-    egzaminas = dist(gen); // Atsitiktinis egzamino balas
-}
+    out << std::setw(10) << "Egz." << "\n";
 
-void Studentas::skaiciuotiGalutiniusBalus() {
-    galutinis_vidurkis = skaiciuotiVidurki();
-    galutinis_mediana = skaiciuotiMediana();
-}
+    std::random_device rd;
+    std::mt19937 gen(rd());
+    std::uniform_int_distribution<> dist(1, 10);
 
-double Studentas::skaiciuotiVidurki() {
-    if (namu_darbai.empty()) throw runtime_error("Nėra namų darbų balų");
-    double suma = 0;
-    for (int balas : namu_darbai) {
-        suma += balas;
+    for (int i = 1; i <= kiekis; ++i) {
+        std::string vardas = "Vardas" + std::to_string(i);
+        std::string pavarde = "Pavarde" + std::to_string(i);
+        out << std::setw(20) << vardas << std::setw(20) << pavarde;
+
+        std::vector<int> nd_balai(15);
+        for (int& nd : nd_balai) {
+            nd = dist(gen);
+            out << std::setw(10) << nd;
+        }
+
+        int egzaminas = dist(gen);
+        out << std::setw(10) << egzaminas << "\n";
     }
-    double vidurkis = suma / namu_darbai.size();
-    return 0.4 * vidurkis + 0.6 * egzaminas;
+    out.close();
 }
 
-double Studentas::skaiciuotiMediana() {
-    if (namu_darbai.empty()) throw runtime_error("Nėra namų darbų balų");
-    sort(namu_darbai.begin(), namu_darbai.end());
-    double mediana;
-    size_t size = namu_darbai.size();
-    if (size % 2 == 0) {
-        mediana = (namu_darbai[size / 2 - 1] + namu_darbai[size / 2]) / 2.0;
-    } else {
-        mediana = namu_darbai[size / 2];
+void nuskaitytiDuomenis(const std::string& failoPavadinimas, std::vector<Student>& studentai) {
+    std::ifstream in(failoPavadinimas);
+    std::string eilute;
+    std::getline(in, eilute);  // Pirma eilutė - antraštė, ją praleidžiame
+
+    while (std::getline(in, eilute)) {
+        std::istringstream ss(eilute);
+        std::string vardas, pavarde;
+        ss >> vardas >> pavarde;
+
+        std::vector<int> nd_balai(15);
+        for (int& nd : nd_balai) {
+            ss >> nd;
+        }
+
+        int egzaminas;
+        ss >> egzaminas;
+
+        studentai.emplace_back(vardas, pavarde, nd_balai, egzaminas);
     }
-    return 0.4 * mediana + 0.6 * egzaminas;
+    in.close();
 }
 
-void Studentas::spausdintiRezultata() const {
-    cout << setw(15) << pavarde << setw(15) << vardas
-         << setw(20) << fixed << setprecision(2) << galutinis_vidurkis
-         << setw(20) << fixed << setprecision(2) << galutinis_mediana << endl;
+double skaiciuotiGalutiniBala(const std::vector<int>& nd_balai, int egzaminas) {
+    double ndVidurkis = std::accumulate(nd_balai.begin(), nd_balai.end(), 0.0) / nd_balai.size();
+    return 0.4 * ndVidurkis + 0.6 * egzaminas;
 }
 
-void Studentas::nuskaitytiIsFailo(ifstream &in) {
-    in >> pavarde >> vardas;
-    namu_darbai.resize(5);
-    for (int &nd : namu_darbai) {
-        if (!(in >> nd)) throw runtime_error("Neteisingi namų darbų duomenys");
+void rusiavimas(const std::vector<Student>& studentai, std::vector<Student>& vargsiukai, std::vector<Student>& kietiakai) {
+    for (const auto& studentas : studentai) {
+        double galutinisBalas = skaiciuotiGalutiniBala(studentas.nd_balai, studentas.egzaminas);
+        if (galutinisBalas < 5.0)
+            vargsiukai.push_back(studentas);
+        else
+            kietiakai.push_back(studentas);
     }
-    if (!(in >> egzaminas)) throw runtime_error("Neteisingi egzamino duomenys");
-    skaiciuotiGalutiniusBalus();
 }
 
-std::string Studentas::gautiPavarde() const {
-    return pavarde;
+void isvestiDuomenis(const std::string& failoPavadinimas, const std::vector<Student>& studentai) {
+    std::ofstream out(failoPavadinimas);
+    out << std::setw(20) << "Vardas" << std::setw(20) << "Pavarde";
+    for (int i = 1; i <= 15; ++i) {
+        out << std::setw(10) << "ND" + std::to_string(i);
+    }
+    out << std::setw(10) << "Egz." << std::setw(10) << "Galutinis" << "\n";
+
+    for (const auto& studentas : studentai) {
+        out << std::setw(20) << studentas.vardas << std::setw(20) << studentas.pavarde;
+        for (const auto& nd : studentas.nd_balai) {
+            out << std::setw(10) << nd;
+        }
+        out << std::setw(10) << studentas.egzaminas;
+
+        double galutinisBalas = skaiciuotiGalutiniBala(studentas.nd_balai, studentas.egzaminas);
+        out << std::setw(10) << std::fixed << std::setprecision(2) << galutinisBalas << "\n";
+    }
+    out.close();
 }
